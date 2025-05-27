@@ -97,9 +97,9 @@ orient tall
 
 %husid plot
 subplot(100,1,[1 30])
-plot(gm_raw.time,gm_raw.IaNorm_ofT,'-','color',col_raw,'linewidth',1); 
+plot(gm_raw.time,gm_raw.IaNorm_his,'-','color',col_raw,'linewidth',1); 
 hold on;
-if ~isempty(gm_prc); plot(gm_prc.time,gm_prc.IaNorm_ofT,'-','color',col_prc,'linewidth',0.7); end
+if ~isempty(gm_prc); plot(gm_prc.time,gm_prc.IaNorm_his,'-','color',col_prc,'linewidth',0.7); end
 legend(leg_labels,'Location','NorthEast');
 ylabel('Normalized Arias Acc Intensity');
 title(titletext,'FontWeight','bold')
@@ -168,18 +168,18 @@ end
 
 %cumulative vel plot
 subplot(100,1,[35 64])
-plot(gm_raw.time,gm_raw.IvNorm_ofT,'-','color',col_raw,'linewidth',1); 
+plot(gm_raw.time,gm_raw.IvNorm_his,'-','color',col_raw,'linewidth',1); 
 hold on;
-if ~isempty(gm_prc); plot(gm_prc.time,gm_prc.IvNorm_ofT,'-','color',col_prc,'linewidth',0.7); end
+if ~isempty(gm_prc); plot(gm_prc.time,gm_prc.IvNorm_his,'-','color',col_prc,'linewidth',0.7); end
 ylabel('Normalized Arias Vel Intensity');
 ylim([0 1])
 graygrid()
 
 %cumulative disp plot
 subplot(100,1,[69 98])
-plot(gm_raw.time,gm_raw.IdNorm_ofT,'-','color',col_raw,'linewidth',1); 
+plot(gm_raw.time,gm_raw.IdNorm_his,'-','color',col_raw,'linewidth',1); 
 hold on;
-if ~isempty(gm_prc); plot(gm_prc.time,gm_prc.IdNorm_ofT,'-','color',col_prc,'linewidth',0.7); end
+if ~isempty(gm_prc); plot(gm_prc.time,gm_prc.IdNorm_his,'-','color',col_prc,'linewidth',0.7); end
 ylabel('Normalized Arias Disp Intensity');
 xlabel('Time (s)');
 ylim([0 1])

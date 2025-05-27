@@ -33,7 +33,7 @@ for j = 1:length(gm_raw)
     subplot(100,1,[s_ind{j}(1,1):s_ind{j}(1,2)])
     plot(gm_raw{j}.time,gm_raw{j}.acc,'-','color',col_raw,'linewidth',1); %rgb values for mathcad's brown is 128 64 0
     hold on;
-    if ~isempty(gm_prc); plot(gm_prc{j}.time,gm_prc{j}.acc,'b','linewidth',0.7); end
+    if ~isempty(gm_prc); plot(gm_prc{j}.time,gm_prc{j}.acc,'color',col_prc,'linewidth',0.7); end
     if j == 1; legend(leg_labels,'Location','NorthEast'); end
     % ylabel(['Acc. ',cmp{j},' (',acc_units,')']);
     ylabel({['Acc. ',cmp{j}],['(',acc_units,')']});
@@ -48,7 +48,7 @@ for j = 1:length(gm_raw)
     subplot(100,1,[s_ind{j}(2,1):s_ind{j}(2,2)])
     plot(gm_raw{j}.time,gm_raw{j}.vel,'-','color',col_raw,'linewidth',1);
     hold on;
-    if ~isempty(gm_prc); plot(gm_prc{j}.time,gm_prc{j}.vel,'b','linewidth',0.7); end
+    if ~isempty(gm_prc); plot(gm_prc{j}.time,gm_prc{j}.vel,'color',col_prc,'linewidth',0.7); end
     % ylabel(['Vel. ',cmp{j},' (cm/s)']);
     ylabel({['Vel. ',cmp{j}],'(cm/s)'});
     dum=ylim; mx = max(max(dum),-min(dum));
@@ -61,7 +61,7 @@ for j = 1:length(gm_raw)
     subplot(100,1,[s_ind{j}(3,1):s_ind{j}(3,2)])
     plot(gm_raw{j}.time,gm_raw{j}.dis,'-','color',col_raw,'linewidth',1); 
     hold on; 
-    if ~isempty(gm_prc); plot(gm_prc{j}.time,gm_prc{j}.dis,'b','linewidth',0.7); end
+    if ~isempty(gm_prc); plot(gm_prc{j}.time,gm_prc{j}.dis,'color',col_prc,'linewidth',0.7); end
     if j == length(gm_raw); xlabel('Time (s)'); end
     % ylabel(['Disp. ',cmp{j},' (cm)']);
     ylabel({['Disp. ',cmp{j}],'(cm)'});
